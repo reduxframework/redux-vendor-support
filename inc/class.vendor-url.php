@@ -16,6 +16,10 @@ if (!class_exists('Redux_VendorURL')) {
                 return self::$url . 'vendor/select2/select2.js';
             } elseif ($handle == 'select2-css') {
                 return self::$url . 'vendor/select2/select2.css';
+            } elseif ($handle == 'qtip-css') {
+                return self::$url . 'vendor/qtip/jquery.qtip.css';
+            } elseif ($handle == 'qtip-js') {
+                return self::$url . 'vendor/qtip/jquery.qtip.js';
             }
         }
     }
