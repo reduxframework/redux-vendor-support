@@ -39,7 +39,7 @@ do not to do anything other than activate this plugin.  Redux Framework does tha
 rest.
 
 == Screenshots ==
-No screnshots vailable.
+No screnshots available.
 
 == Upgrade Notice ==
 = 1.0 =

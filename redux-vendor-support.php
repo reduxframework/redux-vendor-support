@@ -27,4 +27,4 @@
         die;
     }
 
-    include_once('class.vendor-support');
+    include_once('class.vendor-support.php');
