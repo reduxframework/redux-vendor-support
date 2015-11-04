@@ -21,9 +21,9 @@
 
 
 	// Exit if accessed directly
-    if ( ! defined( 'ABSPATH' ) ) {
-        die;
-    }
+	if ( ! defined( 'ABSPATH' ) ) {
+		die;
+	}
 	
 	// The full path to the plugin directory (ends with trailing slash)
 	if( !defined('REDUX_VENDOR_SUPPORT_PLUGIN_DIR') ) define( 'REDUX_VENDOR_SUPPORT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
@@ -31,9 +31,9 @@
 	// The full url to the plugin directory (ends with trailing slash)
 	if( !defined('REDUX_VENDOR_SUPPORT_PLUGIN_URL') ) define( 'REDUX_VENDOR_SUPPORT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 	
-    if ( ! class_exists( 'ReduxFramework_extension_vendor_support' ) ) {
-        if ( file_exists( dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php' ) ) {
-            require dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php';
-            new ReduxFramework_extension_vendor_support( null, REDUX_VENDOR_SUPPORT_PLUGIN_DIR, REDUX_VENDOR_SUPPORT_PLUGIN_URL );
-        }
-    }
+	if ( ! class_exists( 'ReduxFramework_extension_vendor_support' ) ) {
+		if ( file_exists( dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php' ) ) {
+			require dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php';
+ 			new ReduxFramework_extension_vendor_support( null, REDUX_VENDOR_SUPPORT_PLUGIN_DIR, REDUX_VENDOR_SUPPORT_PLUGIN_URL );
+		}
+	}

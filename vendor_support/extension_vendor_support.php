@@ -17,22 +17,22 @@
      * @version     3.0.0
      */
 
-// Exit if accessed directly
-    if ( ! defined( 'ABSPATH' ) ) {
-        exit;
-    }
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
 
-// Don't duplicate me!
-    if ( ! class_exists( 'ReduxFramework_extension_vendor_support' ) ) {
+	// Don't duplicate me!
+	if ( ! class_exists( 'ReduxFramework_extension_vendor_support' ) ) {
 
         /**
          * Main ReduxFramework custom_field extension class
          *
          * @since       3.1.6
          */
-        class ReduxFramework_extension_vendor_support {
+		class ReduxFramework_extension_vendor_support {
 
-            static $version = "1.0.0";
+			static $version = "1.0.0";
 
 			static $vendor_dir = "vendor_support";
 			
@@ -50,16 +50,16 @@
              */
             public function __construct( $parent = null, $extension_dir = null, $extension_url= null ) {
 				
-                include_once $extension_dir . self::$vendor_dir . DIRECTORY_SEPARATOR . 'class.vendor-url.php';
+				include_once $extension_dir . self::$vendor_dir . DIRECTORY_SEPARATOR . 'class.vendor-url.php';
 
 				$this->extension_dir = ( !is_null( $extension_dir ) ? $extension_dir : '' ) . self::$vendor_dir . DIRECTORY_SEPARATOR;
 				
 				$this->extension_url = ( !is_null( $extension_url ) ? $extension_url : '' ) . self::$vendor_dir . '/';
 				
-                Redux_VendorURL::$dir = apply_filters('redux_vendor_support_dir', $this->extension_dir );
+				Redux_VendorURL::$dir = apply_filters('redux_vendor_support_dir', $this->extension_dir );
                 
 				Redux_VendorURL::$url = apply_filters('redux_vendor_support_url', $this->extension_url );
 				
-            }
-        } // class
-    } // if
+			}
+		} // class
+	} // if
