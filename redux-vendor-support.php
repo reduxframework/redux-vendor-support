@@ -32,8 +32,13 @@
 	if( !defined('REDUX_VENDOR_SUPPORT_PLUGIN_URL') ) define( 'REDUX_VENDOR_SUPPORT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 	
 	if ( ! class_exists( 'ReduxFramework_extension_vendor_support' ) ) {
+		
 		if ( file_exists( dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php' ) ) {
+		
 			require dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php';
+ 		
  			new ReduxFramework_extension_vendor_support( null, REDUX_VENDOR_SUPPORT_PLUGIN_DIR, REDUX_VENDOR_SUPPORT_PLUGIN_URL );
+		
 		}
+		
 	}

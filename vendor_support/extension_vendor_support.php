@@ -56,9 +56,9 @@
 				
 				$this->extension_url = ( !is_null( $extension_url ) ? $extension_url : '' ) . self::$vendor_dir . '/';
 				
-				Redux_VendorURL::$dir = apply_filters('redux_vendor_support_dir', $this->extension_dir );
+				Redux_VendorURL::$dir = apply_filters( 'redux_vendor_support_dir', $this->extension_dir );
                 
-				Redux_VendorURL::$url = apply_filters('redux_vendor_support_url', $this->extension_url );
+				Redux_VendorURL::$url = apply_filters( 'redux_vendor_support_url', $this->extension_url );
 				
 			}
 		} // class
