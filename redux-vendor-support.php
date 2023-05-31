@@ -19,7 +19,7 @@
      * @copyright       2012-2015 Redux Framework
      */
 
-// Exit if accessed directly
+    // Exit if accessed directly
     if ( ! defined( 'ABSPATH' ) ) {
         die;
     }
@@ -27,6 +27,6 @@
     if ( ! class_exists( 'ReduxFramework_extension_vendor_support' ) ) {
         if ( file_exists( dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php' ) ) {
             require dirname( __FILE__ ) . '/vendor_support/extension_vendor_support.php';
-            new ReduxFramework_extension_vendor_support();
+            new ReduxFramework_extension_vendor_support( null, plugin_dir_path( __FILE__ ), plugin_dir_url( __FILE__ ) );
         }
     }
