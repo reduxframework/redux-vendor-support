@@ -28,6 +28,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! class_exists( 'ReduxFramework' ) ) {
+	echo '<div class="error notice"><p>Redux Vendor Support cannot load. Redux Framework not active.</p></div>';
+	return;
+}
+
 if ( ! class_exists( 'Redux_Extension_Vendor_Support' ) ) {
 	if ( file_exists( dirname( __FILE__ ) . '/vendor_support/class-redux-extension-vendor-support.php' ) ) {
 		require dirname( __FILE__ ) . '/vendor_support/class-redux-extension-vendor-support.php';
