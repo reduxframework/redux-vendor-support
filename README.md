@@ -19,3 +19,15 @@ Redux::setExtensions( 'OPT_NAME', 'PATH_TO_vendor_support'  );
 
 ## Reducing the Plugin/Extensions Size
 If you wish to reduce the size of this plugin/extension, you may decide to remove folders within `~/vendor_support/vendor/` according to your needs.
+
+## Changelog
+### 1.1.1
+* Added code to disallow loading of plugin if Redux v3 is running.
+
+### 1.1.0
+* Added code to disallow loading of plugin if Redux isn't running.
+
+### 1.0.0
+* Redux v4 compatibility.
+* Update ACE Editor.
+* Remove select2.

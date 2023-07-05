@@ -10,7 +10,7 @@
  * Description:       Registration of Redux support libraries for local installations.
  * Author:            Team Redux
  * Author URI:        http://redux.io
- * Version:           1.1.0
+ * Version:           1.1.1
  * Requires at least: 5.0
  * Requires PHP:      7.1
  * Text Domain:       redux-framework
@@ -30,6 +30,11 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'ReduxFramework' ) ) {
 	echo '<div class="error notice"><p>Redux Vendor Support cannot load. Redux Framework not active.</p></div>';
+	return;
+}
+
+if ( ! class_exists( 'Redux_Extension_Abstract' ) ) {
+	echo '<div class="error notice"><p>Redux version 3 detected. This plugin is incompatible with Redux version 3.</p></div>';
 	return;
 }
 
